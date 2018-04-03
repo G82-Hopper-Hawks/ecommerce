@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="products.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script defer src="products.js"></script>
+    <script defer src="/classes/Description.js"></script>
+    <script defer src="/data.js"></script>
+    <script defer src="/helper.js"></script>
+    <script defer src="/classes/CartList.js"></script>
+    <script defer src="/classes/ProductList.js"></script>
+    <script defer src="/app.js"></script>
   </head>
   <body>
       <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -84,6 +90,45 @@
         </ul>
       </aside>
     </div>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              Products
+            </h4>
+            <div class="container">
+              <div class="row products">
+              </div>
+            </div>
+          </div>
+          <div class="column is-three-quarters">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              Your Cart
+              <span><img src="cart.png" alt="cart" class="cartImg" height="30px" width="30px">QTY:<span id='total'>0</span></span>
+            </h4>
+            <ul class="list-group mb-3 cart">
+            </li>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr/>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+              Details
+              <span class='details'></span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
   </div>
   <footer class="footer">
     <div class="container">
