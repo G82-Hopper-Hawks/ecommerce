@@ -35,6 +35,10 @@ a {
   text-shadow: none;
 }
 
+.product-grid {
+  flex-wrap: wrap;
+}
+
 .content p.control {
   margin-bottom: 0;
 }
