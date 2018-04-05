@@ -1,5 +1,6 @@
 .navbar {
     background-color: grey;
+    justify-content: space-between;
 }
 
 .title {
@@ -10,4 +11,20 @@
 .menu-col {
     color: black;
     background-color: green;
+}
+
+.card {
+    width: 300px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.product-container {
+    max-width: 100%;
+    width: 100%;
 }
