@@ -42,14 +42,10 @@
         Product Links
       </a>
     </div>
-    <div class="column is-one-quarter">
-      <h4>
-        Your Cart
-        <span><img src="cart.png" alt="cart" class="cartImg" height="30px" width="30px">QTY:<span id='total'>0</span></span>
-      </h4>
-      <ul class="list-group mb-3 cart">
-      </li>
-    </div>
+    <button class="nav-button display-all-button">Show All</button>
+    <button class="nav-button fantasy-button" >Fantasy</button>
+    <button class="nav-button sci-fi-button" >Science Fiction</button>
+    <button class="nav-button comics-button">Comics</button>
   </nav>
   <div class="columns">
     <div class="column is-one-fifth">
@@ -90,11 +86,11 @@
     </div>
     <section>
       <div class="container product-container">
-        <div class="row">
-          <div class="col-md-8">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <div class="columns">
+          <div class="column">
+            <h2 class="products-title">
               Products
-            </h4>
+            </h2>
             <div class="container product-container">
               <div class="row products">
               </div>
@@ -103,23 +99,30 @@
         </div>
       </div>
     </section>
+    <div>
+      <div class="column is-one-quarter">
+        <h4>
+          Your Cart
+          <span><img src="cart.png" alt="cart" class="cartImg" height="30px" width="30px">QTY:<span id='total'>0</span></span>
+        </h4>
+        <ul class="list-group mb-3 cart">
+        </li>
+      </div>
+    </div>
     <hr/>
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              Details
-              <span class='details'></span>
-            </h4>
-          </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="description-title">
+            Details
+            <span class='details'></span>
+          </h2>
         </div>
       </div>
-    </section>
-
-
-
-  </div>
+    </div>
+  </section>
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">

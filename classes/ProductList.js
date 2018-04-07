@@ -8,7 +8,8 @@ class ProductList{
 
   static renderCard(cardData, cb, cbDetails){
     const card = document.createElement('div')
-    addClassesToElement(card, 'card', 'col-sm-12', 'col-md-6')
+    addClassesToElement(card, 'card')
+    card.setAttribute('data-theme', cardData.theme)
 
     const img = document.createElement('img')
     addClassesToElement(img, 'card-img-top')

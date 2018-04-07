@@ -1,6 +1,7 @@
 .navbar {
     background-color: grey;
-    justify-content: space-between;
+    justify-content: space-around;
+    z-index: 2;
 }
 
 .title {
@@ -21,10 +22,19 @@
 
 .products {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
 div.product-container {
     max-width: 100%;
     width: 100%;
+}
+
+.products-title {
+    margin-top: 20px;
+}
+
+.hide {
+    display: none;
 }
