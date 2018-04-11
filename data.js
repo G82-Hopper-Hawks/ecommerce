@@ -70,5 +70,85 @@ const products = [
     image: '/weapons/batarang.jpg',
     theme: 'comic',
     description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 10,
+    name: 'Buster Sword',
+    price: 2.99,
+    image: '/weapons/buster-sword.jpg',
+    theme: 'fantasy',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 11,
+    name: "Captain's Shield",
+    price: 2.99,
+    image: '/weapons/Captain_America_Shield.png',
+    theme: 'comic',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 12,
+    name: 'Excalibur',
+    price: 2.99,
+    image: '/weapons/excalibur.jpg',
+    theme: 'fantasy',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 13,
+    name: 'Gravity Gun',
+    price: 2.99,
+    image: '/weapons/gravity-gun.jpg',
+    theme: 'science-fiction',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 14,
+    name: 'Green Power Ring',
+    price: 2.99,
+    image: '/weapons/greenpowerring.png',
+    theme: 'comic',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 15,
+    name: 'Infinity Gauntlet',
+    price: 2.99,
+    image: '/weapons/infinitygauntlet.jpg',
+    theme: 'comic',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 16,
+    name: 'Keyblade',
+    price: 2.99,
+    image: '/weapons/keyblade.jpg',
+    theme: 'fantasy',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 17,
+    name: 'Mjolnir',
+    price: 2.99,
+    image: '/weapons/mjolnir.jpg',
+    theme: 'comic',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 18,
+    name: 'Needler',
+    price: 2.99,
+    image: '/weapons/needler.jpg',
+    theme: 'science-fiction',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
+  },
+  {
+    id: 19,
+    name: 'Noisy Cricket',
+    price: 2.99,
+    image: '/weapons/noisycricket.jpg',
+    theme: 'science-fiction',
+    description: 'Vivamus a nisi tincidunt, ultricies odio non, scelerisque diam. Maecenas laoreet diam at lorem rutrum, id condimentum sapien fringilla. Aenean tristique urna tortor, nec dictum augue suscipit at. In diam neque, mattis quis turpis at, luctus commodo arcu. Suspendisse rhoncus est lorem, ac pharetra augue molestie sed. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque fringilla, risus id vulputate mollis, lectus dolor tempor erat, at vehicula turpis mauris non eros.'
   }
 ]
