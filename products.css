@@ -76,3 +76,7 @@ footer.footer {
   footer.footer li {
     margin-bottom: 1rem;
   }
+
+  .menu-label {
+    color: black;
+  }

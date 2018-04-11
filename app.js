@@ -37,6 +37,7 @@ const myProducts = new ProductList(
 
 
 // category button functions
+console.log(myProducts.items)
 myProducts.render()
 
 const fantasyFilter = document.querySelector('.fantasy-button')
@@ -87,4 +88,6 @@ dAll.addEventListener('click', event => {
     i.classList.remove('hide')
   }
 })
+
+
 
