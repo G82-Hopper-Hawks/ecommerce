@@ -7,6 +7,7 @@ class ProductList{
   }
 
   static renderCard(cardData, cb, cbDetails){
+<<<<<<< HEAD
     const cardContainer = document.createElement('div')
     addClassesToElement(cardContainer, 'column', 'is-4-desktop',  'is-6-tablet')
     cardContainer.setAttribute('data-theme', cardData.theme)
@@ -56,6 +57,41 @@ class ProductList{
     cardBody.appendChild(cardContent)
 
     return cardContainer
+=======
+    const card = document.createElement('div')
+    addClassesToElement(card, 'card')
+    card.setAttribute('data-theme', cardData.theme)
+
+    const img = document.createElement('img')
+    addClassesToElement(img, 'card-img-top')
+    img.src = cardData.image
+    img.addEventListener('click', event => cbDetails(cardData))
+    card.appendChild(img)
+
+    const cardBody = document.createElement('div')
+    addClassesToElement(cardBody, 'card-body')
+    card.appendChild(cardBody)
+
+    const cardTitle = document.createElement('h5')
+    addClassesToElement(cardTitle, 'card-title')
+    cardTitle.innerHTML = `${cardData.name} - ${cardData.price} Souls`
+    cardBody.appendChild(cardTitle)
+
+    const cardText = document.createElement('p')
+    addClassesToElement(cardText, 'card-text')
+    cardText.innerHTML = `${cardData.description.slice(0,100)}...`
+    cardBody.appendChild(cardText)
+
+    const button = document.createElement('a')
+    addClassesToElement(button, 'btn', 'btn-primary', )
+    button.innerHTML = 'Add to Cart'
+    button.addEventListener('click', function(event){
+      cb(cardData)
+    })
+    cardBody.appendChild(button)
+
+    return card
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
   }
 
   // impure method

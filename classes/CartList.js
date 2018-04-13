@@ -25,11 +25,16 @@ class CartList{
 
   static renderCartItem(item, removecb){
     const li = document.createElement('li')
+<<<<<<< HEAD
     addClassesToElement(li, 'cart-item', 'panel-block')
+=======
+    addClassesToElement(li, 'list-group-item', 'd-flex', 'justify-content-between', 'lh-condensed')
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
 
     const div = document.createElement('div')
 
     const h6 = document.createElement('h6')
+<<<<<<< HEAD
     h6.innerHTML = item.name
     div.appendChild(h6)
 
@@ -41,6 +46,12 @@ class CartList{
     })
     h6.appendChild(remove)
 
+=======
+    addClassesToElement(h6, 'my-0')
+    h6.innerHTML = item.name
+    div.appendChild(h6)
+
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
     const small = document.createElement('small')
     small.innerHTML = `${item.quantity} x ${item.price}`
     div.appendChild(small)
@@ -48,10 +59,24 @@ class CartList{
     li.appendChild(div)
 
     const price = document.createElement('span')
+<<<<<<< HEAD
     price.innerHTML = `${(item.quantity*item.price)} Souls`
 
     li.appendChild(price)
 
+=======
+    price.innerHTML = `${ (item.quantity*item.price)} Souls`
+
+    li.appendChild(price)
+
+    const remove = document.createElement('button')
+    remove.innerHTML = "Remove Quantity 1"
+    remove.addEventListener('click', function(){
+      removecb(item)
+    })
+    li.appendChild(remove)
+
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
     return li
 
   }
@@ -68,7 +93,11 @@ class CartList{
 
   renderTotal(){
     const li = document.createElement('li')
+<<<<<<< HEAD
     addClassesToElement(li, 'panel-block', 'cart-item')
+=======
+    addClassesToElement(li, 'list-group-item', 'd-flex', 'justify-content-between')
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
 
     const span = document.createElement('span')
     span.innerHTML = 'Total'
@@ -94,11 +123,19 @@ class CartList{
     }
 
     const sortedByIndexCart = Object.values(this.cart).sort((a,b) => a.index - b.index)
+<<<<<<< HEAD
 
     const cartIncludingTotal = [
       ...sortedByIndexCart.map((product) => CartList.renderCartItem(product, removeCallback)), this.renderTotal()
     ]
 
+=======
+    
+    const cartIncludingTotal = [
+      ...sortedByIndexCart.map((product) => CartList.renderCartItem(product, removeCallback)), this.renderTotal()
+    ]
+    
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
     this.counter.innerHTML = Object.values(this.cart).reduce((acc, ele) => {return acc+ele.quantity}, 0)
 
     // modifying the DOM
@@ -106,3 +143,7 @@ class CartList{
     appendChildrenArray(this.elementToRenderIn, cartIncludingTotal)
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6655b1227c5cbc9eedfce579c1c53868c0c2dabf
