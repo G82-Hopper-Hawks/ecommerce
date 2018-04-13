@@ -34,3 +34,19 @@ nav.navbar {
 .navbar-item span {
   padding-right: 10px;
 }
+div.warn {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  color:red;
+}
+input:focus{
+  border-color: red;
+}
+.hidden {
+  display: none;
+}
+
+.required {
+  border-color: red;
+}
