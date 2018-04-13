@@ -7,9 +7,16 @@
     <link rel="stylesheet" href="/node_modules/bulma/css/bulma.css">
     <link rel="stylesheet" href="/node_modules/bulma-carousel/dist/bulma-carousel.min.css">
     <link rel="stylesheet" href="/style.css">
+    <script defer src="/node_modules/bulma-carousel/dist/bulma-carousel.min.js"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="/main.js"></script>
-    <script defer src="/node_modules/bulma-carousel/dist/bulma-carousel.min.js"></script>
+    <script defer src="/products.js"></script>
+    <script defer src="/data.js"></script>
+    <script defer src="/helper.js"></script>
+    <script defer src="/classes/CartList.js"></script>
+    <script defer src="/classes/ProductList.js"></script>
+    <script defer src="/classes/Description.js"></script>
+    <script defer src="/app.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
@@ -18,16 +25,16 @@
       <div class="hero-carousel carousel-animated carousel-animate-fade">
         <div class="carousel-container">
           <div class="carousel-item has-background is-active">
-            <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" />
+            <img class="is-background" src="/carousel/carousel1.jpg" alt="" />
           </div>
           <div class="carousel-item has-background">
-            <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" />
+            <img class="is-background" src="/carousel/carousel2.jpg" alt="" />
           </div>
           <div class="carousel-item has-background">
-            <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" />
+            <img class="is-background" src="/carousel/carousel3.jpg" alt="" />
           </div>
           <div class="carousel-item has-background">
-            <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" />
+            <img class="is-background" src="/carousel/carousel4.jpg" alt="" />
           </div>
         </div>
         <div class="carousel-navigation is-overlay">
@@ -39,152 +46,49 @@
           </div>
         </div>
       </div>
-      <div class="hero-head">
-        <nav class="navbar is-transparent">
-          <div class="container">
-            <div class="navbar-brand">
-              <a class="navbar-item">
-                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-              </a>
-              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroA" class="navbar-menu">
-              <div class="navbar-end">
-                <a class="navbar-item">
-                  <span>
-                    <i class="fas fa-shopping-cart"></i>
-                  </span>
-                  0 Items
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
       <div class="hero-body has-text-centered">
         <div class="columns is-mobile is-centered">
           <div class="column is-half is-narrow">
           </div>
         </div>
       </div>
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li class="is-active"><a>Home</a></li>
-              <li><a>Category 1</a></li>
-              <li><a>Category 2</a></li>
-              <li><a>Category 3</a></li>
-              <li><a>Category 4</a></li>
-              <li><a>Clearance</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
     </section>
+
+    <nav class="navbar is-transparent top-bar">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="logo.png" alt="A Devilkin's Inula">
+        </a>
+      </div>
+      <div class="navbar-menu is-active">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">
+            Home
+          </a>
+          <a class="navbar-item" href="/products.html">
+            Products
+          </a>
+        </div>
+        <div class="navbar-end">
+          <a class="navbar-item" href="checkout.html">
+            <span class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <span id="total">0</span>
+            Items
+          </a>
+        </div>
+      </div>
+    </nav>
 
     <section class="section">
       <div class="container">
         <h1 class="title has-text-centered">
           New Arrivals
         </h1>
-        <div class="columns product-grid">
-          <div class="column is-3-desktop is-6-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-                <div class="card-overlay-container">
-                  <div class="card-overlay">
-                    <span>
-                      <i class="fas fa-shopping-cart"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  Name of Product
-                  <br>
-                  <small>$213.23</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3-desktop is-6-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-                <div class="card-overlay-container">
-                  <div class="card-overlay">
-                    <span>
-                      <i class="fas fa-shopping-cart"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  Name of Product
-                  <br>
-                  <small>$213.23</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3-desktop is-6-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-                <div class="card-overlay-container">
-                  <div class="card-overlay">
-                    <span>
-                      <i class="fas fa-shopping-cart"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  Name of Product
-                  <br>
-                  <small>$213.23</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3-desktop is-6-tablet">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                </figure>
-                <div class="card-overlay-container">
-                  <div class="card-overlay">
-                    <span>
-                      <i class="fas fa-shopping-cart"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  Name of Product
-                  <br>
-                  <small>$213.23</small>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="columns product-grid products home-products">
+        </div>
+        <div class="cart hide">
         </div>
       </div>
     </section>
@@ -196,24 +100,26 @@
             <div class="column is-6-desktop is-offset-3-desktop is-10-tablet is-offset-1-tablet">
               <div class="content">
                 <h1 class="title has-text-centered">Sign Up Today</h1>
-                <h4 class="subtitle has-text-centered">Lorem ipsum dolor amet banjo PBR&B slow-carb readymade master cleanse pabst truffaut flannel cardigan.</h4>
+                <h4 class="subtitle emailhead has-text-centered">Bringing visitors for Persephone, these poppies induce waking sleep if picked and travellers forget their purpose.</h4>
                 <div class="field has-addons has-addons-centered">
-                  <p class="control is-expanded has-icons-left has-icons-right">
-                    <input class="input is-danger" type="email" placeholder="Email Address">
+                  <p class="control is-expanded has-icons-left">
+                    <input id="email-form" class="input emailinput" type="email" placeholder="Email Address">
                     <span class="icon is-small is-left">
                       <i class="fas fa-envelope"></i>
                     </span>
-                    <span class="icon is-small is-right">
-                      <i class="fas fa-exclamation-triangle"></i>
-                    </span>
                   </p>
                   <p class="control">
-                    <a class="button is-primary">
+                    <a id="email-submit" class="button is-primary">
                       Sign Up
                     </a>
                   </p>
                 </div>
-                <p class="help is-danger email">This email is invalid</p>
+                <p id="email-error" class="help is-danger">
+                  I need a valid email to give you a poppy.
+                </p>
+                <p id="email-success" class="help is-primary">
+                  You will now forget your purpose too.
+                </p>
               </div>
             </div>
           </div>
@@ -230,12 +136,50 @@
     <footer class="footer has-text-centered">
       <div class="container">
          <div class="columns">
-          <div class="column is-8-desktop is-offset-2-desktop">
-            <p>
-              <small>
-                Copyright © 2018 Daniel Shikoff, Sunil Kakar, and Vikanda Gonzales
-              </small>
-            </p>
+          <div class="column is-3">
+            <h1 class="title">Visit Us</h1>
+            <img src="location.jpg" alt="Persephone's Garden">
+          </div>
+          <div class="column is-3">
+            <h1 class="title">Contact Us</h1>
+            All Day, Every Day
+            <br>
+            (666) 666-6666
+            <br>
+            we@love.persephone
+            <br><br>
+            <strong>Persephone's Garden</strong><br>
+            666 Ever Blooming Poppies<br>
+            The Underworld
+          </div>
+          <div class="column is-3">
+            <h1 class="title">More Info</h1>
+            <ul>
+              <li><a>Shipping & Returns</a>
+              </li>
+              <li><a>Frequently Asked Questions</a>
+              </li>
+              <li><a>International Shipping</a>
+              </li>
+              <li><a>Secure Shopping</a>
+              </li>
+              <li><a>About Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="column is-3">
+            <h1 class="title">In the News</h1>
+            <ul>
+              <li><a>Fall Line Released</a><br>
+                <small>September 10, 2015</small>
+              </li>
+              <li><a>Our Factories</a><br>
+                <small>August 30, 2015</small>
+              </li>
+              <li><a>A Letter from Our CEO</a><br>
+                <small>February 2, 2015</small>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

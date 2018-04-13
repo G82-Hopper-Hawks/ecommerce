@@ -4,50 +4,54 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
-a {
+a, button {
   transition: all 300ms ease;
 }
 
-.navbar-brand img {
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+.hide {
+  display: none;
 }
 
-.navbar-item {
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+.hero.is-medium.has-carousel {
+  height: 400px;
 }
 
-.navbar-item span {
+nav.navbar.top-bar {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar-item img {
+  max-height: 3rem;
+}
+
+.navbar-item span.icon {
   padding-right: 10px;
 }
 
-.hero-foot li a {
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, .5);
-}
-
-.hero-foot li:hover a {
-  color: #4a4a4a;
-  text-shadow: none;
-}
-
-.hero-foot li.is-active a {
-  text-shadow: none;
+.navbar-item span#total {
+  padding-right: 4px;
 }
 
 .product-grid {
   flex-wrap: wrap;
 }
 
+.home-products .column:not(:last-child):not(:nth-last-child(2)):not(:nth-last-child(3)) {
+  display: none;
+}
+
 .content p.control {
   margin-bottom: 0;
 }
 
-.field:not(:last-child) {
+.field.emailinput:not(:last-child) {
   margin-bottom: 0;
 }
 
-.title:not(.is-spaced) + .subtitle {
+.title:not(.is-spaced) + .subtitle.emailhead {
   line-height: 1.75rem;
   margin-top: -.75rem;
 }
@@ -81,6 +85,10 @@ a {
   font-size: 3rem;
 }
 
+#email-error, #email-success {
+  display: none;
+}
+
 a#return {
   background: rgba(0, 0, 0, 0.7);
   border-radius: 50%;
@@ -90,7 +98,7 @@ a#return {
   position: fixed;
   right: 20px;
   width: 50px;
-  z-index: 10;
+  z-index: 30;
 }
 
 a#return span {
@@ -113,6 +121,14 @@ a#return:hover span {
 
 footer.footer {
   padding-bottom: 3rem;
+}
+
+footer.footer img {
+  border: 5px solid lightgray;
+}
+
+footer.footer li {
+  margin-bottom: 1rem;
 }
 
 /* BULMA CAROUSEL FIX */
