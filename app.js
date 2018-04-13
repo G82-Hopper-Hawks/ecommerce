@@ -33,16 +33,45 @@ const myProducts = new ProductList(
                         showDetailsEventHandler(details)
                       )
 
+myProducts.render()                      
+
+// category button functions
+
+const priceFilter = document.querySelector('.price-button')
+priceFilter.addEventListener('click', event => {
+  myProducts.items.sort(function compare(a, b) {
+    if (a.price < b.price) {
+      return -1;
+    }
+    if (a.price > b.price) {
+      return 1;
+    }
+    return 0;
+  })
+  myProducts.render()
+})
+
+const alphabetFilter = document.querySelector('.alpha-button')
+alphabetFilter.addEventListener('click', event => {
+  console.log(myProducts.items)
+  myProducts.items.sort(function compare(a,b ) {
+    if(a.name.charCodeAt(0) < b.name.charCodeAt(0)) {
+      return -1;
+    }
+    if(a.name.charCodeAt(0) > b.name.charCodeAt(0)) {
+      return 1;
+    }
+    return 0
+  })
+  myProducts.render()
+})
+
 // start rendering page
 
 
-// category button functions
-console.log(myProducts.items)
-myProducts.render()
 
 const fantasyFilter = document.querySelector('.fantasy-button')
 fantasyFilter.addEventListener('click', event => {
-  
   const products = document.querySelector('.products')
   const pChildren = products.childNodes
   for(let i of pChildren){
@@ -55,7 +84,6 @@ fantasyFilter.addEventListener('click', event => {
 
 const sciFiFilter = document.querySelector('.sci-fi-button')
 sciFiFilter.addEventListener('click', event => {
-  
   const products = document.querySelector('.products')
   const pChildren = products.childNodes
   for(let i of pChildren){
@@ -68,7 +96,6 @@ sciFiFilter.addEventListener('click', event => {
 
 const comicFilter = document.querySelector('.comics-button')
 comicFilter.addEventListener('click', event => {
-  
   const products = document.querySelector('.products')
   const pChildren = products.childNodes
   for(let i of pChildren){
@@ -81,13 +108,15 @@ comicFilter.addEventListener('click', event => {
 
 const dAll = document.querySelector('.display-all-button')
 dAll.addEventListener('click', event => {
-  
   const products = document.querySelector('.products')
   const pChildren = products.childNodes
   for(let i of pChildren){
     i.classList.remove('hide')
   }
 })
+
+
+
 
 
 

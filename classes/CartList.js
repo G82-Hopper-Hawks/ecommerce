@@ -41,7 +41,7 @@ class CartList{
     li.appendChild(div)
 
     const price = document.createElement('span')
-    price.innerHTML = `$${ (item.quantity*item.price).toFixed(2) }`
+    price.innerHTML = `${ (item.quantity*item.price)} Souls`
 
     li.appendChild(price)
 
@@ -75,7 +75,7 @@ class CartList{
     li.appendChild(span)
 
     const strong = document.createElement('strong')
-    strong.innerHTML = `$${this.calculateTotalPrice().toFixed(2)}`
+    strong.innerHTML = ` ${this.calculateTotalPrice()} Souls`
     li.appendChild(strong)
 
     return li

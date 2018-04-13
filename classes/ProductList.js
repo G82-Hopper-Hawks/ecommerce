@@ -23,7 +23,7 @@ class ProductList{
 
     const cardTitle = document.createElement('h5')
     addClassesToElement(cardTitle, 'card-title')
-    cardTitle.innerHTML = `${cardData.name} - $${cardData.price.toFixed(2)}`
+    cardTitle.innerHTML = `${cardData.name} - ${cardData.price} Souls`
     cardBody.appendChild(cardTitle)
 
     const cardText = document.createElement('p')
