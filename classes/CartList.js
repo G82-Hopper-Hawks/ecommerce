@@ -25,14 +25,20 @@ class CartList{
 
   static renderCartItem(item, removecb){
     const li = document.createElement('li')
-    addClassesToElement(li, 'list-group-item', 'd-flex', 'justify-content-between', 'lh-condensed')
-
+    addClassesToElement(li, 'cart-item', 'panel-block')
     const div = document.createElement('div')
 
     const h6 = document.createElement('h6')
-    addClassesToElement(h6, 'my-0')
     h6.innerHTML = item.name
     div.appendChild(h6)
+
+    const remove = document.createElement('span')
+    addClassesToElement(remove, 'remove')
+    remove.innerHTML = '<i class=\"far fa-trash-alt\"></i>'
+    remove.addEventListener('click', function(event){
+      removecb(item)
+    })
+    h6.appendChild(remove)
 
     const small = document.createElement('small')
     small.innerHTML = `${item.quantity} x ${item.price}`
@@ -41,17 +47,9 @@ class CartList{
     li.appendChild(div)
 
     const price = document.createElement('span')
-    price.innerHTML = `${ (item.quantity*item.price)} Souls`
+    price.innerHTML = `${(item.quantity*item.price)} Souls`
 
     li.appendChild(price)
-
-    const remove = document.createElement('button')
-    remove.innerHTML = "Remove Quantity 1"
-    remove.addEventListener('click', function(){
-      removecb(item)
-    })
-    li.appendChild(remove)
-
     return li
 
   }
@@ -68,7 +66,7 @@ class CartList{
 
   renderTotal(){
     const li = document.createElement('li')
-    addClassesToElement(li, 'list-group-item', 'd-flex', 'justify-content-between')
+    addClassesToElement(li, 'panel-block', 'cart-item')
 
     const span = document.createElement('span')
     span.innerHTML = 'Total'
@@ -94,11 +92,11 @@ class CartList{
     }
 
     const sortedByIndexCart = Object.values(this.cart).sort((a,b) => a.index - b.index)
-    
+
     const cartIncludingTotal = [
       ...sortedByIndexCart.map((product) => CartList.renderCartItem(product, removeCallback)), this.renderTotal()
     ]
-    
+
     this.counter.innerHTML = Object.values(this.cart).reduce((acc, ele) => {return acc+ele.quantity}, 0)
 
     // modifying the DOM
@@ -106,4 +104,3 @@ class CartList{
     appendChildrenArray(this.elementToRenderIn, cartIncludingTotal)
   }
 }
-

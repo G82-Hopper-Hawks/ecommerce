@@ -6,7 +6,6 @@ function addToCartEventHandler(cart){
   }
 }
 
-
 //
 
 function showDetailsEventHandler(details) {
@@ -33,7 +32,7 @@ const myProducts = new ProductList(
                         showDetailsEventHandler(details)
                       )
 
-myProducts.render()                      
+myProducts.render()
 
 // category button functions
 
@@ -67,8 +66,6 @@ alphabetFilter.addEventListener('click', event => {
 })
 
 // start rendering page
-
-
 
 const fantasyFilter = document.querySelector('.fantasy-button')
 fantasyFilter.addEventListener('click', event => {
@@ -114,9 +111,3 @@ dAll.addEventListener('click', event => {
     i.classList.remove('hide')
   }
 })
-
-
-
-
-
-
