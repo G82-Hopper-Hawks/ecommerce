@@ -24,9 +24,6 @@ if(check.checked === true) {
   }
 }
 
-
-
-
 let unHide = document.querySelector('.hide')
 let completePurchase = document.querySelector('#purchase')
 
@@ -45,8 +42,6 @@ completePurchase.addEventListener('click', function(event) {
   let shipZip = document.querySelector('.shipZip')
   let cCard = document.querySelector('.cCard')
   let ccV = document.querySelector('.ccV')
-
-
 
   let ship_bill_check = [billFirst, billLast, billAdd1, billCity, billState, billZip, shipFirst, shipLast, shipAdd1, shipCity, shipState, shipZip, ccV, cCard]
   fillCheck(ship_bill_check, event)
