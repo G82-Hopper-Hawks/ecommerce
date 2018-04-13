@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Devilkin's Inula</title>
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+  <link rel="stylesheet" href="checkout.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script defer src="checkout.js"></script>
+</head>
+
+<body>
+  <nav class="navbar is-transparent top-bar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+          <img src="logo.png" alt="A Devilkin's Inula">
+        </a>
+    </div>
+    <div class="navbar-menu is-active">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+            Home
+          </a>
+        <a class="navbar-item" href="/products.html">
+            Products
+          </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="cart.html">
+            <span class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <span id="total">0</span>
+            Items
+          </a>
+      </div>
+    </div>
+  </nav>
+  <section class='section'>
+    <div class='container'>
+      <div class="columns">
+        <div class='column is-half border'>
+          <label class="header">Shipping Information</label>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input shipFname required" type="text" placeholder="First Name *">
+                  <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input shipLname required" type="text" placeholder="Last Name *">
+                  <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input shipCname" type="text" placeholder="Company Name">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input shipAdd1 required" type="text" placeholder="Address Line One *">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input shipAdd2 required" type="text" placeholder="Address Line Two">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input shipCity required" type="text" placeholder="City *" min=1>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <span class="select required">
+                  <select class="shipState">
+                       <option value="" selected disabled hidden>State *</option>
+                      <option value="AL">AL</option>
+                      <option value="AK">AK</option>
+                      <option value="AR">AR</option>
+                      <option value="AZ">AZ</option>
+                      <option value="CA">CA</option>
+                      <option value="CO">CO</option>
+                      <option value="CT">CT</option>
+                      <option value="DC">DC</option>
+                      <option value="DE">DE</option>
+                      <option value="FL">FL</option>
+                      <option value="GA">GA</option>
+                      <option value="HI">HI</option>
+                      <option value="IA">IA</option>
+                      <option value="ID">ID</option>
+                      <option value="IL">IL</option>
+                      <option value="IN">IN</option>
+                      <option value="KS">KS</option>
+                      <option value="KY">KY</option>
+                      <option value="LA">LA</option>
+                      <option value="MA">MA</option>
+                      <option value="MD">MD</option>
+                      <option value="ME">ME</option>
+                      <option value="MI">MI</option>
+                      <option value="MN">MN</option>
+                      <option value="MO">MO</option>
+                      <option value="MS">MS</option>
+                      <option value="MT">MT</option>
+                      <option value="NC">NC</option>
+                      <option value="NE">NE</option>
+                      <option value="NH">NH</option>
+                      <option value="NJ">NJ</option>
+                      <option value="NM">NM</option>
+                      <option value="NV">NV</option>
+                      <option value="NY">NY</option>
+                      <option value="ND">ND</option>
+                      <option value="OH">OH</option>
+                      <option value="OK">OK</option>
+                      <option value="OR">OR</option>
+                      <option value="PA">PA</option>
+                      <option value="RI">RI</option>
+                      <option value="SC">SC</option>
+                      <option value="SD">SD</option>
+                      <option value="TN">TN</option>
+                      <option value="TX">TX</option>
+                      <option value="UT">UT</option>
+                      <option value="VT">VT</option>
+                      <option value="VA">VA</option>
+                      <option value="WA">WA</option>
+                      <option value="WI">WI</option>
+                      <option value="WV">WV</option>
+                      <option value="WY">WY</option>
+                    </select>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input shipZip required" type="text" placeholder="Zip Code * "min ='5' max='5'>
+                </p>
+              </div>
+            </div>
+          </div>
+          <label class="checkbox">
+  <input id="check" type="checkbox" name='fillBill'>
+  Billing Address is the Same as Shipping
+</label>
+        </div>
+        <div class='column is-half border'>
+          <label class="header display">Billing Information</label>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input billFname required" type="text" placeholder="First Name *">
+                  <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input billLname required" type="text" placeholder="Last Name *">
+                  <span class="icon is-small is-left">
+          <i class="fas fa-user"></i>
+        </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input billCname" type="text" placeholder="Company Name">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input billAdd1 required" type="text" placeholder="Address Line One *">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field is-expanded">
+                <div class="field">
+                  <p class="control is-expanded">
+                    <input class="input billAdd2" type="text" placeholder="Address Line Two">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input billCity required" type="text" placeholder="City *">
+                </p>
+              </div>
+              <div class="field">
+                <p class="control">
+                  <span class="select">
+                  <select class="billState required">
+                       <option value=" "selected disabled hidden>State *</option>
+                       <option value="AL">AL</option>
+                       <option value="AK">AK</option>
+                      <option value="AR">AR</option>
+                      <option value="AZ">AZ</option>
+                      <option value="CA">CA</option>
+                      <option value="CO">CO</option>
+                      <option value="CT">CT</option>
+                      <option value="DC">DC</option>
+                      <option value="DE">DE</option>
+                      <option value="FL">FL</option>
+                      <option value="GA">GA</option>
+                      <option value="HI">HI</option>
+                      <option value="IA">IA</option>
+                      <option value="ID">ID</option>
+                      <option value="IL">IL</option>
+                      <option value="IN">IN</option>
+                      <option value="KS">KS</option>
+                      <option value="KY">KY</option>
+                      <option value="LA">LA</option>
+                      <option value="MA">MA</option>
+                      <option value="MD">MD</option>
+                      <option value="ME">ME</option>
+                      <option value="MI">MI</option>
+                      <option value="MN">MN</option>
+                      <option value="MO">MO</option>
+                      <option value="MS">MS</option>
+                      <option value="MT">MT</option>
+                      <option value="NC">NC</option>
+                      <option value="NE">NE</option>
+                      <option value="NH">NH</option>
+                      <option value="NJ">NJ</option>
+                      <option value="NM">NM</option>
+                      <option value="NV">NV</option>
+                      <option value="NY">NY</option>
+                      <option value="ND">ND</option>
+                      <option value="OH">OH</option>
+                      <option value="OK">OK</option>
+                      <option value="OR">OR</option>
+                      <option value="PA">PA</option>
+                      <option value="RI">RI</option>
+                      <option value="SC">SC</option>
+                      <option value="SD">SD</option>
+                      <option value="TN">TN</option>
+                      <option value="TX">TX</option>
+                      <option value="UT">UT</option>
+                      <option value="VT">VT</option>
+                      <option value="VA">VA</option>
+                      <option value="WA">WA</option>
+                      <option value="WI">WI</option>
+                      <option value="WV">WV</option>
+                      <option value="WY">WY</option>
+                    </select>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded">
+                <input class="input shipZip required" type="text" placeholder="Zip Code *" required>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cCard hid">
+    <div class='container'>
+      <div class="columns">
+        <div class='column is-half border'>
+          <label class="header">Credit Card</label>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Credit Card Number">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <label class="label">CCV</label>
+                <input class="input" type="text" placeholder="CCV">
+              </div>
+              <div class="field1">
+                <label class="label">Expiration Date</label>
+                <select>
+                      <option value="01">January</option>
+                      <option value="02">February </option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                      <option value="08">August</option>
+                      <option value="09">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                </select>
+                <select>
+                      <option value="18"> 2018</option>
+                      <option value="19"> 2019</option>
+                      <option value="20"> 2020</option>
+                      <option value="21"> 2021</option>
+                      <option value="22"> 2016</option>
+                      <option value="23"> 2017</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="field is-horizontal">
+            <div class="field-body">
+              <div class="field">
+                <button class="button is-centered is-link is-focused">Complete Purchase</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='column is-half border'>
+          <div class="field is-centered">
+            <div class="field-body">
+              <table  class="table is-stripped" style="width:100%">
+                 <caption class="invoice">Invoice</caption>
+                <tr>
+                  <th>Products</th>
+                  <th>Qty</th>
+                  <th>Price</th>
+                </tr>
+                <tr>
+                  <td>Product X</td>
+                  <td>1</td>
+                  <td>$ 1.99</td>
+                </tr>
+                <tr>
+                  <td>Product Y</td>
+                  <td>3</td>
+                  <td>$12.99</td>
+                </tr>
+                <tr>
+                  <td>Product Z</td>
+                  <td>2</td>
+                  <td>$ 8.99</td>
+                </tr>
+                <tr>
+                  <tfoot>
+                    <td>Total</td>
+                    <td>    </td>
+                    <td>$23.97</td>
+                  </tfoot>
+                </tr>
+              </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+  </section>
+</body>
+
+
+</html>
