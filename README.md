@@ -1,4 +1,5 @@
 # A Devilkin's Inula
+The Sci-Fi Shopper and the Retail Store of the Future!
 For all your fantasy and sci-fi needs!
 
 [Shop Now!](http://a-devilkins-inula.surge.sh)
